@@ -1,0 +1,7 @@
+stages:
+  - Build
+
+Build:
+  stage: Build
+  script:
+  - mvn  clean install -DskipTests
