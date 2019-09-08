@@ -10,7 +10,7 @@ cron:
 
 # HTTP Server
 server:
-  # port: 8090  # HTTP (Tomcat) port
+  port: 8080  # HTTP (Tomcat) port
   undertow: 
     accesslog: 
       enabled: true
