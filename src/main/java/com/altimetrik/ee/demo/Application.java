@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpMethod;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -24,7 +25,7 @@ facing errors when connecting to mysql db so removing props
 @EnableAsync
 @EnableScheduling
 @SpringBootApplication(scanBasePackages = { "com.altimetrik" })
-
+@PropertySource("classpath:${k8s.db.env}.properties")
 @EnableAutoConfiguration
 public class Application {
 
