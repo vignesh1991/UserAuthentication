@@ -35,7 +35,7 @@ public class UserController {
 
         String token = Jwts
                 .builder()
-                .setId("softtekJWT")
+                .setId("AuthToken")
                 .setSubject(username)
                 .claim("authorities",
                         grantedAuthorities.stream()
